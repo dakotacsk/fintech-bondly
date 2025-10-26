@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bondly - Newsfeed</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+</head>
+<body class="bg-soft-mint font-sans">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 text-white flex flex-col sidebar">
+            <div class="p-6 text-2xl font-bold">Bondly</div>
+            <nav class="flex-1 px-4">
+                <ul>
+                    <li class="mb-2"><a href="index.html" class="nav-link p-3 rounded-lg flex items-center">Real-Time Tracker</a></li>
+                    <li class="mb-2"><a href="newsfeed.html" class="nav-link active p-3 rounded-lg flex items-center">Newsfeed</a></li>
+                    <li class="mb-2"><a href="my_accounts.html" class="nav-link p-3 rounded-lg flex items-center">My Accounts</a></li>
+                    <li class="mb-2"><a href="insights.html" class="nav-link p-3 rounded-lg flex items-center">Insights</a></li>
+                </ul>
+            </nav>
+            <div class="p-4">
+                <p class="text-sm">&copy; 2025 Bondly</p>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-8 overflow-y-auto">
+            <header class="flex justify-between items-center mb-8">
+                <h1 class="text-3xl font-bold text-deep-green">Newsfeed</h1>
+                <div class="flex items-center space-x-4">
+                    <button class="p-2 rounded-full bg-white shadow-md hover:bg-gray-100 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                        </svg>
+                    </button>
+                    <div class="flex items-center">
+                        <img src="https://i.pravatar.cc/40" alt="User Avatar" class="w-10 h-10 rounded-full">
+                        <span class="ml-3 font-semibold text-deep-green">Davalynn Sally</span>
+                    </div>
+                </div>
+            </header>
+
+            <section class="dashboard-grid">
+                <div class="card">
+                    <h2>Fed Announces Rate Hike</h2>
+                    <p class="date">October 25, 2025</p>
+                    <p>The Federal Reserve has announced a 25 basis point rate hike, impacting short-term bond yields and potentially affecting your loan payments.</p>
+                    <a href="#" class="text-emerald-green font-semibold">Read More</a>
+                </div>
+                <div class="card">
+                    <h2>Treasury Yields Fluctuate Amid Inflation Concerns</h2>
+                    <p class="date">October 24, 2025</p>
+                    <p>Long-term treasury yields saw significant movement today as new inflation data was released, signaling potential market shifts.</p>
+                    <a href="#" class="text-emerald-green font-semibold">Read More</a>
+                </div>
+                <div class="card">
+                    <h2>Corporate Bond Market Outlook for Q4</h2>
+                    <p class="date">October 23, 2025</p>
+                    <p>Analysts predict a stable corporate bond market for Q4, with opportunities identified in investment-grade bonds.</p>
+                    <a href="#" class="text-emerald-green font-semibold">Read More</a>
+                </div>
+                <div class="card">
+                    <h2>Global Economic Slowdown Impacts Bond Demand</h2>
+                    <p class="date">October 22, 2025</p>
+                    <p>A recent report indicates a global economic slowdown, leading to increased demand for safe-haven government bonds.</p>
+                    <a href="#" class="text-emerald-green font-semibold">Read More</a>
+                </div>
+                <div class="card">
+                    <h2>New ESG Bond Issuances on the Rise</h2>
+                    <p class="date">October 21, 2025</p>
+                    <p>The market for Environmental, Social, and Governance (ESG) bonds continues to expand, offering new investment avenues.</p>
+                    <a href="#" class="text-emerald-green font-semibold">Read More</a>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Modal for Critical Alerts -->
+    <div id="alert-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white p-8 rounded-xl shadow-2xl max-w-sm w-full">
+            <h2 class="text-2xl font-bold text-warm-red mb-4">Critical Alert!</h2>
+            <p class="text-gray-700 mb-6">The Federal Reserve has announced a 25 bps rate hike. This may impact your variable-rate loans.</p>
+            <button id="close-modal" class="w-full bg-warm-red text-white py-2 rounded-lg hover:bg-red-700 transition">Acknowledge</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
